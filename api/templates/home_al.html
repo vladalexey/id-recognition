@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Sightengine demo - Python and Flask</title>
+  <!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app.css') }}"> -->
+  <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+  <script type="text/javascript">
+    $(window).load(function() {
+      // Animate loader off screen
+      $(".loader").fadeOut("slow");;
+      });
+      </script>
+</head>
+
+<body>
+
+    <script  src="{{ url_for('static',filename='js/index.js') }}"></script>
+    
+
+    <div class="loader"></div>
+
+<header class="navbar">
+
+    <form action="/upload" method="post" enctype="multipart/form-data" >
+      <div class="image-upload-wrap">
+
+        <span class="btn btn-default btn-file">
+          <input class="file-upload-input" onchange="readURL(this);" type="file" name="image">
+        </span>
+
+        <div class="drag-text">
+            <h3>Drag and drop a file or select add Image</h3>
+        </div>
+
+      </div>
+
+      <div class="file-upload-content">
+          <img class="file-upload-image" src="{{ url_for('static',filename= 'res/' + filename) }}" alt="your image" />
+          <div class="image-title-wrap">
+              <!-- <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button> -->
+              <input type="submit" onclick="removeUpload()" value="Upload your image" class="file-upload-btn">
+          </div>
+      </div>
+    </form>
+    
+  
+
+  <span class="navbar-text"> Text Detection with
+      <a href="https://sightengine.com/">CTPN</a>
+  </span>
+</header>
+
+
+
+</body>
+</html>
