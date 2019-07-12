@@ -49,15 +49,3 @@ Simplely run
 python ./main/train.py
 ```
 - The model provided in checkpoints_mlt is trained on GTX1070 for 50k iters. It takes about 0.25s per iter. So it will takes about 3.5 hours to finished 50k iterations.
-***
-# some results
-`NOTICE:` all the photos used below are collected from the internet. If it affects you, please contact me to delete them.
-<img src="/data/res/006.jpg" width=320 height=480 /><img src="/data/res/008.jpg" width=320 height=480 />
-<img src="/data/res/009.jpg" width=320 height=480 /><img src="/data/res/010.png" width=320 height=320 />
-***
-## oriented text connector
-- oriented text connector has been implemented, i's working, but still need futher improvement.
-- left figure is the result for DETECT_MODE H, right figure for DETECT_MODE O
-<img src="/data/res/007.jpg" width=320 height=240 /><img src="/data/res_oriented/007.jpg" width=320 height=240 />
-<img src="/data/res/008.jpg" width=320 height=480 /><img src="/data/res_oriented/008.jpg" width=320 height=480 />
-***
